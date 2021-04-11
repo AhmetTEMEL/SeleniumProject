@@ -3,6 +3,7 @@ package appPages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import platformPages.BasePage;
+import utils.PropertiesFile;
 
 public class SignUpAppPageClass extends BasePage {
     public SignUpAppPageClass(WebDriver driver) {
@@ -12,7 +13,7 @@ public class SignUpAppPageClass extends BasePage {
     By loginButton = By.xpath("//button[@id='login-button']");
 
     public void enterPasswordForApp(){
-        writeTextTo(passwordField,"ta12345");
+        writeTextTo(passwordField, PropertiesFile.getValue("password"));
     }
     public void login(){clickElement(loginButton);}
 }

@@ -2,6 +2,7 @@ package platformPages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import utils.PropertiesFile;
 
 public class LoginPlatformPageClass extends BasePage{
     public LoginPlatformPageClass(WebDriver driver) {
@@ -13,12 +14,12 @@ public class LoginPlatformPageClass extends BasePage{
 
     public void enterEmail(){
         waitUntilElmentVisible(email);
-        writeTextTo(email,"testautomation@socio.events");
+        writeTextTo(email,PropertiesFile.getValue("email"));
     }
 
     public void enterPassword(){
         waitUntilElmentVisible(password);
-        writeTextTo(password,"ta12345");
+        writeTextTo(password,PropertiesFile.getValue("password"));
     }
 
     public void login(){

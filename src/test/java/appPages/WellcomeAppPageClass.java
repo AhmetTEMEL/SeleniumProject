@@ -3,6 +3,7 @@ package appPages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import platformPages.BasePage;
+import utils.PropertiesFile;
 
 public class WellcomeAppPageClass extends BasePage {
     public WellcomeAppPageClass(WebDriver driver) {
@@ -12,7 +13,7 @@ public class WellcomeAppPageClass extends BasePage {
     By continueButton = By.xpath("//button[@id='continue-button']");
 
     public void enterEmailForApp(){
-        writeTextTo(emailField,"testautomation@socio.events");
+        writeTextTo(emailField, PropertiesFile.getValue("email"));
     }
     public void Continue(){
         clickElement(continueButton);

@@ -11,6 +11,8 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
+import utils.PropertiesFile;
+
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
@@ -19,8 +21,8 @@ public class BaseTest {
     protected static WebDriver driver;
     protected static ExtentReports extent;
     protected static  ExtentSparkReporter spark;
-    public static final String USERNAME = "ahmettemel1";
-    public static final String AUTOMATE_KEY = "JhfntnLUSeZJUkgoKZSk";
+    public static final String USERNAME = "alihanozbayrak1";
+    public static final String AUTOMATE_KEY = "yYzukxkJ3sAqxT1pyW7B";
     DesiredCapabilities caps;
     public static final String URL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub-cloud.browserstack.com/wd/hub";
 
@@ -45,7 +47,7 @@ public class BaseTest {
 //        WebDriverManager.chromedriver().setup();
 //        driver = new ChromeDriver();
         driver = new RemoteWebDriver(new URL(URL), caps);
-        driver.get("https://staging.platform.socio.events/signup");
+        driver.get(PropertiesFile.getValue("baseUrl"));
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().fullscreen();
     }
