@@ -1,10 +1,11 @@
 package platformPages;
 
+import base.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import utils.PropertiesFile;
 
-public class LoginPlatformPageClass extends BasePage{
+public class LoginPlatformPageClass extends BasePage {
     public LoginPlatformPageClass(WebDriver driver) {
         super(driver);
     }

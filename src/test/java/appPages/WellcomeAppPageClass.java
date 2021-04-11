@@ -2,7 +2,7 @@ package appPages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import platformPages.BasePage;
+import base.BasePage;
 import utils.PropertiesFile;
 
 public class WellcomeAppPageClass extends BasePage {

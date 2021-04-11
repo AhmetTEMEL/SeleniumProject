@@ -1,4 +1,4 @@
-package platformPages;
+package base;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;

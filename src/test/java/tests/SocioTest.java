@@ -3,11 +3,11 @@ package tests;
 import appPages.HomeAppPageClass;
 import appPages.SignUpAppPageClass;
 import appPages.WellcomeAppPageClass;
+import base.BaseTest;
 import org.testng.annotations.Test;
 import platformPages.*;
-import utils.Helpers;
 
-public class SocioTest extends BaseTest{
+public class SocioTest extends BaseTest {
 
     RegisterationPlatformPageClass registerationPlatformPageClass;
     LoginPlatformPageClass loginPlatformPageClass;
